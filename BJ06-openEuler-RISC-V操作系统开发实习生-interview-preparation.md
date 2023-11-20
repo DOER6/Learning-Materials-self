@@ -65,7 +65,7 @@ int main() {
     printf("Enter two numbers: ");
     scanf("%lf %lf", &num1, &num2);
 
-    // 根据运算符执行相应的计算
+    // 根据运算符执行相应的计算o
     switch (operator) {
         case '+':
             result = num1 + num2;
