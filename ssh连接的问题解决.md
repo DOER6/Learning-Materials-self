@@ -35,7 +35,7 @@
 
 虚拟机中的redhat操作'VPN连接-配置VPN-有线'方法改为自动（DHCP）就可以了，之前是手动的，只设置了我当时热点的地址，所以说只能在那个网络下连接。
 
-![image-20231121112306633](C:\Users\17632\AppData\Roaming\Typora\typora-user-images\image-20231121112306633.png)
+![image-20231121112631](联想截图_20231121112631.png)
 
 修改好之后，回到虚拟机终端
 
@@ -49,8 +49,8 @@
 
 我的虚拟机设置是这样的
 
-![image-20231121112632507](C:\Users\17632\AppData\Roaming\Typora\typora-user-images\image-20231121112632507.png)
+![image-20231121112632507](联想截图_20231121112631.png)
 
 
 
-![image-20231121112746004](C:\Users\17632\AppData\Roaming\Typora\typora-user-images\image-20231121112746004.png)
+![image-20231121112746004](联想截图_20231121112743.png)
