@@ -1,4 +1,98 @@
-#### 1."小狗状态"接口的设计要求编写一个接口DogState，其中包括一个void showState()方法。Dog类中包括一个DogState接口声明的变量State，并且有一个show()方法用于回调接口state的showState()方法。另外，需要编写实现DogState接口的类来描述小狗的各种状态，并在主类中测试小狗的各种状态。
+## **PLCT Lab**
+
+PLCT Lab 全称是程序语言与编译技术实验室，隶属于中国科学院软件研究所（ISCAS）智能软件研究中心（ISRC），致力于成为编译技术领域的开源领导者，推进工具链及运行时系统等软件基础设施的技术革新，具备主导开发和维护重要基础设施的技术及管理能力。与此同时，致力于培养一万名编译领域尖端人才，推动先进编译技术在国内的普及和发展。
+
+我们相信 RISC-V 是指令集架构的未来。
+
++ #### BJ106 openEuler RISC-V 操作系统开发实习生
+
+  岗位介绍:参与 openEuler 官方 risc-v sig 的维护工作，包含 compiler sig 的 LLVM 平行宇宙计划 RISC-V 方向实习生。
+
+  实习内容：
+
+  1. 跟踪 openEuler 在 RISC-V 架构的软件包构建情况并进行修复
+  2. 参与以 llvm 构建发行版的「LLVM 平行宇宙计划」的软件包构建情况、进行尝试性修复与提交
+  3. 协助 maintainer 调研并解决 oerv 系统 issue
+  4. 构建并丰富openEuler软件生态，参加社区 SIG 组开源运作
+  5. 调研分析操作系统领域最新动向和前沿技术，结合产品场景应用落地
+
++ #### 岗位要求:
+
+  - 基础能力 Lv2 及以上。
+
+  - 对 linux 发行版有一定使用经验。
+  - 掌握中文普通话、英文[通常要求 CET4/6 通过]。
+  - 微信响应速度快，每周7天中至少能够有3天、工作时间有至少连续3个小时在线一起工作。
+
+- 如何正确的投递简历?
+- 在投递简历之前最好对我们有更多一点了解。以下是阅读材料：
+
+- 极简项目管理 是目前PLCT实验室的管理方式，实习生也在管理范围内。请先阅读。
+- 我们如何进行实习生招聘
+- 我们如何对实习生进行能力评定和培养
+- 实习生生存手册 目前还在断断续续的撰写中，欢迎围观和贡献PR (Pull Requests)
+
+阅读之后，接下来就可以发邮件了。以下内容请认真阅读。不符合条件邮件不会收到回复。
+
+有意者请投递简历至：**吴老师 wuwei2016@iscas.ac.cn**
+
+邮件标题请注明：**岗位编号 - 姓名 - 手机号码 - 学校**
+
+（兼职实习的伙伴可以用【兼职】取代【学校】）
+
+邮件正文请:**进行跟应聘职位相关的自我介绍**，不超过300字。
+
+邮件必须附带简历。**没有PDF格式简历的邮件不保证会收到回复**。
+
+- 通知上机考试的时间和登陆说明
+
+  考试前15分钟可以登陆进入。请不要提前尝试登陆，密码输入错误IP会被ban两小时。
+
+  == 登陆方式 ==
+
+  ssh 你的GitHub账号名全小写@ep.plctlab.org
+
+  登陆进去之后，用
+
+  tmux attach || tmux
+
+  进入考试环境。考题通过微信发送给你。
+
+  没有使用过 ssh、tmux、命令行环境的同学请提前自学。
+
+  == 考试规则 ==
+
+  开放式。可以上网查询，可以看书，可以从Google上寻找已经有或者类似的答案。
+
+  禁忌是不可以问其他人。直接求助其他人类视为作弊，失去资格。
+
+#### 所有实习生共性要求（技术类）
+
+开放岗位的入职要求（教学助理等非技术类的同学只需要满足前两条）：
+
+1. 良好的沟通理解能力、能够观察和感知他人的态度和观点。能够主动沟通、遇到计划外或坏消息能够大声的说出来。
+2. 知道如何陈述bugs/issues以及向其他人求助，如何不浪费同事的时间，将复现bug需要的信息提供完整。
+3. 能力值评定一般要求达到LV2级别及以上。参见：我们如何面试实习生，我们如何给实习生评级。
+4. 热爱编程，经常写代码。C/C++/Java/JavaScript 任何一种常见语言都可以。
+5. 熟练使用 Linux 命令行；会一点 Python/Bash 脚本进行自动化。
+6. 熟练使用 Google 搜索引擎、流畅高清看油管。
+7. 熟练使用 Git，能够自己 rebase 解决 conflicts。
+8. （加分）自学了 RISC-V 指令集，包括 RV32GC 和 RV64GC。在自己的电脑上部署运行起来QEMU-RISCV64以及Spike模拟器。
+9. （加分）对于网络知识有基本了解并熟练使用，例如SSH任意端口登陆、Port Forwarding、反向链接、ProxyCommand 等配置自行掌握。
+
+其他说明：所有岗位默认都是远程实习，支持全球实习工资支付（中国学生必须是国内银行卡，与软件所北京本部签约需要建设银行卡）。实习随时可以开始随时可以暂停随时可以结束（如果超过一周旷工、或八周没有外部可见产出会被劝退）。
+
+
+
+
+
+面试官您好，接下来我大概花三分钟的时间介绍一下我自己，我叫王睿，是一名山东科技大学通信工程专业的大三学生，由于还是一名在校大学生，所以项目经验比较少，只有一些比赛和简单的实验项目
+
+
+
+
+
+1."小狗状态"接口的设计要求编写一个接口DogState，其中包括一个void showState()方法。Dog类中包括一个DogState接口声明的变量State，并且有一个show()方法用于回调接口state的showState()方法。另外，需要编写实现DogState接口的类来描述小狗的各种状态，并在主类中测试小狗的各种状态。
 
 1. **接口 `DogState`:**
    
@@ -26,7 +120,7 @@
 
 
 
-#### 2.在Java GUI编程中，输入输出流通常用于处理与文件、网络、或其他数据源的交互。对于GUI应用程序，常见的输入输出流使用主要涉及到文件读写和网络通信。
+2.在Java GUI编程中，输入输出流通常用于处理与文件、网络、或其他数据源的交互。对于GUI应用程序，常见的输入输出流使用主要涉及到文件读写和网络通信。
 
 
 
@@ -40,10 +134,6 @@
 - **沟通与记录：** 具备及时与mentor及同事沟通的能力，能够用文字记录工作，总结问题与经验。
 - **Linux操作：** 具有Linux的使用经验，熟悉命令行操作，掌握常用命令如grep、find、date、sed、tr、head等。
 - **版本控制：** 能够使用基本的git和GitHub/gitlab功能，包括但不限于clone、commit、push、branch、merge等。
-
-
-
-
 
 
 
@@ -96,6 +186,8 @@ int main() {
     return 0; // 返回零表示程序正常结束
 }
 ```
+
+
 
 ### 2. 学生成绩管理系统
 
@@ -187,15 +279,43 @@ int main() {
 }
 ```
 
-这些代码提供了基本的功能，可以根据实际需求进行修改和扩展。
+
+
+#### 1. C++ 程序设计：
+
+在C++中，我牢固掌握了面向对象编程，能够有效地设计和实现数据结构和算法。通过实际项目，我获得了在系统开发、图形界面设计和游戏编程方面的经验。
+
+#### 2. Java 程序设计：
+
+我具备扎实的Java编程基础，能够开发后端服务和前端应用。我的项目经验包括使用Spring框架构建Web服务和Android应用程序的开发，展现了全栈开发的能力。
+
+#### 3. 数据结构（C）：
+
+在C语言环境下，我熟悉各类数据结构的设计和实现，包括链表、树等。我在项目中成功应用了数据结构来解决实际问题，提高了程序的效率。
+
+#### 4. 计算机网络：
+
+我了解计算机网络的基本原理，熟悉TCP/IP协议栈。通过参与网络通信模块的设计，我具备处理分布式系统和网络编程的实际经验。
+
+#### 5. 操作系统与编程：
+
+在操作系统方面，我学到了进程管理、内存管理和文件系统等核心概念。我能够在Linux环境下进行系统管理和Shell脚本编写，处理并发编程和线程同步问题。
+
+#### 6. 总结：
+
+通过这些学习和实践，我构建了跨足多领域的实际技能。我对技术问题有着实际的见解和解决方案，并在项目中展现了灵活性和适应能力。我期待通过RISC-V实习生岗位，将我的技能应用到实际项目中，为团队的成功做出贡献。
 
 
 
+### 基础概念能力边界评估
 
 
-#### 基础概念能力边界评估
 
-int、float、double、char等基本数据类型的大小、范围以及在内存中的存储方式
+[TOC]
+
+
+
+##### int、float、double、char等基本数据类型的大小、范围以及在内存中的存储方式
 
 1. **int：**
    - 大小：通常为4个字节，即32位。
@@ -217,8 +337,7 @@ int、float、double、char等基本数据类型的大小、范围以及在内�
 这些数值和范围可能会因编译器和计算机体系结构的不同而有所变化。在实际编程中，可以使用`sizeof`操作符来获取各种数据类型在当前编译环境中的实际大小。
 
 
-
-描述一下OSI模型和TCP/IP模型，它们之间有什么区别？
+##### 描述一下OSI模型和TCP/IP模型，它们之间有什么区别？
 
 **OSI模型（Open Systems Interconnection 模型）：**
 
@@ -251,7 +370,7 @@ TCP/IP模型是实际使用最广泛的网络协议栈，它是基于实践而�
 
 
 
-什么是操作系统？操作系统的主要功能是什么？
+##### 什么是操作系统？操作系统的主要功能是什么？
 
 
 
@@ -297,7 +416,7 @@ TCP/IP模型是实际使用最广泛的网络协议栈，它是基于实践而�
 
 
 
-什么是冯·诺依曼体系结构？
+##### 什么是冯·诺依曼体系结构？
 
 
 
@@ -315,7 +434,7 @@ TCP/IP模型是实际使用最广泛的网络协议栈，它是基于实践而�
 
 
 
-什么是编译器？编译器的主要任务是什么？
+##### 什么是编译器？编译器的主要任务是什么？
 
 **编译器：**
 
@@ -348,7 +467,7 @@ TCP/IP模型是实际使用最广泛的网络协议栈，它是基于实践而�
 
 
 
-什么是设计模式？举例说明一个常用的设计模式及其应用场景。
+##### 什么是设计模式？举例说明一个常用的设计模式及其应用场景。
 
 **设计模式：**
 
@@ -404,7 +523,7 @@ javaCopy codepublic class Singleton {
 
 
 
-简要描述一下Git的基本工作流程是什么？
+##### 简要描述一下Git的基本工作流程是什么？
 
 
 
@@ -478,3 +597,356 @@ Git的基本工作流程涉及到本地仓库和远程仓库之间的协作。�
    ```
 
 这是一个简单的Git基本工作流程示例。实际使用中可能会涉及更多操作，如解决冲突、创建标签等，但以上步骤涵盖了日常开发中的核心操作。
+
+
+
+#### 带信号量操作和互斥
+
+这是一个使用 pthread 和信号量（semaphore）的简单多线程程序，其中有两个线程：`computeThread` 和 `printThread`。
+
+1. **头文件和全局变量：**
+   
+   ```c
+   #include <pthread.h>
+   #include <stdio.h>
+   #include <semaphore.h>
+   
+   int buf = 0;                             // 全局变量 buf
+   pthread_mutex_t mutex_x = PTHREAD_MUTEX_INITIALIZER;  // 互斥锁
+   sem_t sem;                               // 信号量
+   ```
+   
+2. **`computeThread` 函数：**
+   ```c
+   void *computeThread()
+   {
+       int i = 0;
+       while (1)
+       {
+           pthread_mutex_lock(&mutex_x);   // 加锁
+           while (buf != 0)
+           {
+               pthread_mutex_unlock(&mutex_x);  // 解锁，允许其他线程执行
+               sched_yield();  // 让出 CPU，避免过多占用资源
+               pthread_mutex_lock(&mutex_x);   // 再次加锁
+           }
+   
+           buf = i;  // 将计算结果存入 buf
+           printf("Computing buf=%d...", buf);
+           i++;
+           pthread_mutex_unlock(&mutex_x);  // 解锁
+           sem_post(&sem);  // 发送信号通知 printThread 线程数据可用
+       }
+       return NULL;
+   }
+   ```
+
+   - `computeThread` 负责计算并更新全局变量 `buf`，然后通过信号量通知 `printThread` 数据已准备好。
+
+3. `printThread` 函数：**
+   ```c
+   void *printThread()
+   {
+       while (1)
+       {
+           sem_wait(&sem);  // 等待信号
+           pthread_mutex_lock(&mutex_x);  // 加锁
+           printf("buf=%d\n", buf);  // 打印 buf
+           buf = 0;  // 清空 buf
+           pthread_mutex_unlock(&mutex_x);  // 解锁
+       }
+       return NULL;
+   }
+   ```
+
+   - `printThread` 等待信号，一旦收到信号，它就会打印 `buf` 的值，并将 `buf` 重置为 0。
+
+4. **`main` 函数：**
+   ```c
+   int main()
+   {
+       sem_init(&sem, 0, 0);  // 初始化信号量
+       pthread_t thread1_id, thread2_id;
+   
+       pthread_create(&thread2_id, NULL, &printThread, NULL);  // 创建 printThread 线程
+       pthread_create(&thread1_id, NULL, &computeThread, NULL);  // 创建 computeThread 线程
+   
+       pthread_join(thread1_id, NULL);  // 等待 computeThread 线程结束
+       pthread_join(thread2_id, NULL);  // 等待 printThread 线程结束
+   
+       return 0;
+   }
+   ```
+
+   - `main` 函数初始化信号量，创建两个线程，并等待这两个线程的结束。其中，`printThread` 负责打印 `buf` 的值，而 `computeThread` 负责计算并更新 `buf`。这两个线程通过互斥锁 `mutex_x` 和信号量 `sem` 进行同步。
+   
+     
+   
+
+### cnt.c
+
+这段 C++ 代码是一个简单的程序，用于统计给定字符串中的二元组和三元组的出现频率。让我逐行解释它：
+       
+     #include <iostream>
+     #include <unordered_map>
+     #include <algorithm>
+
+上面这几行是包含所需的头文件，其中 `<iostream>` 用于输入输出操作，`<unordered_map>` 用于创建无序映射，`<algorithm>` 包含了一些算法。
+   ``void countPairsAndTriplets(const std::string& input) {``
+
+``		std::unordered_map<std::string, int> frequency;``
+这里定义了一个函数 `countPairsAndTriplets`，它接受一个字符串 `input` 作为参数，并创建了一个无序映射 `frequency`，用于存储二元组和三元组的频率。
+         for (size_t i = 0; i < input.length() - 1; ++i) {
+             std::string pair = input.substr(i, 2);
+             frequency[pair]++;
+         }
+       
+这个循环遍历输入字符串，每次取两个字符作为一个二元组，然后将这个二元组作为键存储在 `frequency` 中，并增加对应的频率。
+         for (size_t i = 0; i < input.length() - 2; ++i) {
+             std::string triplet = input.substr(i, 3);
+             frequency[triplet]++;
+         }
+类似地，这个循环遍历输入字符串，每次取三个字符作为一个三元组，然后将这个三元组作为键存储在 `frequency` 中，并增加对应的频率。
+         for (const auto& entry : frequency) {
+             std::cout << entry.first << " " << entry.second << std::endl;
+         }
+最后，这个循环遍历 `frequency` 映射中的所有键值对，输出二元组和三元组以及它们的频率。
+     int main(int argc, char* argv[]) {
+         if (argc != 2) {
+             std::cerr << "ERROR: Need a string." << std::endl;
+             return 1;
+         }
+         std::string input(argv[1]);
+         std::transform(input.begin(), input.end(), input.begin(), ::tolower);
+         countPairsAndTriplets(input);
+         return 0;
+     }
+`main` 函数首先检查命令行参数的数量，确保只有一个字符串作为输入。然后，将输入字符串转换为小写形式（忽略大小写），最后调用 `countPairsAndTriplets` 函数来统计并输出二元组和三元组的频率。
+       
+
+### check.c
+
+当然，我将更详细地解释每一句代码：
+       
+     ```cpp
+     #include <iostream>
+     #include <cmath>
+     
+     struct Point {
+         double x, y;
+     };
+     ```
+
+这部分代码引入了两个头文件，`<iostream>` 用于标准输入输出，`<cmath>` 提供了一些数学函数。接着定义了一个简单的结构体 `Point`，用来表示平面上的点，其中包含两个成员变量 `x` 和 `y` 表示横坐标和纵坐标。
+       
+     ```cpp
+     bool onSegment(Point p, Point q, Point r) {
+         if (q.x <= std::max(p.x, r.x) && q.x >= std::min(p.x, r.x) &&
+             q.y <= std::max(p.y, r.y) && q.y >= std::min(p.y, r.y))
+             return true;
+         return false;
+     }
+     ```
+
+这是一个辅助函数，用于检查点 `q` 是否在由 `p` 和 `r` 构成的线段上。它使用 `std::max` 和 `std::min` 函数来确保点 `q` 在以 `p` 和 `r` 为端点的线段上。
+       
+     ```cpp
+     bool doIntersect(Point p1, Point q1, Point p2, Point q2) {
+         double o1 = (q1.y - p1.y) * (p2.x - p1.x) - (q1.x - p1.x) * (p2.y - p1.y);
+         double o2 = (q1.y - p1.y) * (q2.x - p1.x) - (q1.x - p1.x) * (q2.y - p1.y);
+         double o3 = (q2.y - p2.y) * (p1.x - p2.x) - (q2.x - p2.x) * (p1.y - p2.y);
+         double o4 = (q2.y - p2.y) * (q1.x - p2.x) - (q2.x - p2.x) * (q1.y - p2.y);
+         if (o1 * o2 < 0 && o3 * o4 < 0) {
+             return true;
+         }
+         if (o1 == 0 && onSegment(p1, p2, q1)) return true;
+         if (o2 == 0 && onSegment(p1, q2, q1)) return true;
+         if (o3 == 0 && onSegment(p2, p1, q2)) return true;
+         if (o4 == 0 && onSegment(p2, q1, q2)) return true;
+         return false;
+     }
+     ```
+
+这是判断两条线段是否相交的函数。使用叉乘法计算四个交点的方向，并根据这些方向的符号关系判断两条线段是否相交。同时，还检查了端点是否在另一条线段上，以确保相交判定的正确性。
+       
+     ```cpp
+     int main(int argc, char* argv[]) {
+         if (argc != 9) {
+             std::cerr << "ERROR: Invalid number of arguments." << std::endl;
+             return 1;
+         };
+         Point L1P1 = {std::stod(argv[1]), std::stod(argv[2])};
+         Point L1P2 = {std::stod(argv[3]), std::stod(argv[4])};
+         Point L2P1 = {std::stod(argv[5]), std::stod(argv[6])};
+         Point L2P2 = {std::stod(argv[7]), std::stod(argv[8])};
+         if (doIntersect(L1P1, L1P2, L2P1, L2P2)) {
+             std::cout << "TRUE" << std::endl;
+         } else {
+             std::cout << "FALSE" << std::endl;
+         }
+         return 0;
+     }
+
+这是主函数，用于处理程序的输入和输出。首先，检查命令行参数的数量是否为9，如果不是，输出错误信息并返回1。接着，使用 `std::stod` 将命令行参数转换为 `double` 类型，构造了表示两条线段的四个点 `L1P1`、`L1P2`、`L2P1` 和 `L2P2`。最后，调用 `doIntersect` 函数判断两条线段是否相交，如果相交则输出 "TRUE"，否则输出 "FALSE"。
+       
+    makefile
+
+这是一个简单的 Makefile 文件，用于构建三个 C++ 程序：`mixplus`、`check` 和 `cnt`。以下是对每个部分的解释：
+       
+     1. `CC = g++`: 定义了一个变量 `CC`，用于指定 C++ 编译器，这里指定为 `g++`。
+       
+     2. `CFLAGS = -Wall -std=c++11`: 定义了一个变量 `CFLAGS`，用于指定编译选项，其中 `-Wall` 表示开启所有警告，`-std=c++11` 表示使用 C++11 标准。
+       
+     3. `all: mixplus check cnt`: 定义了一个伪目标 `all`，表示当执行 `make` 命令时，默认构建 `mixplus`、`check` 和 `cnt`。
+       
+     4. `mixplus: mixplus.c`: 定义了一个目标 `mixplus`，表示构建 `mixplus` 可执行文件，依赖于 `mixplus.c` 源文件。下面是构建规则：
+       makefile
+        $(CC) $(CFLAGS) -o mixplus mixplus.c
+        ```
+
+这里使用了 `g++` 编译器，传递了指定的编译选项 `-Wall -std=c++11`，并指定输出文件为 `mixplus`。
+       
+5. `check: check.c`: 类似于 `mixplus`，定义了目标 `check`，表示构建 `check` 可执行文件，依赖于 `check.c` 源文件。
+       
+   
+        $(CC) $(CFLAGS) -o check check.c
+    
+6. `cnt: cnt.c`: 类似于上述目标，定义了目标 `cnt`，表示构建 `cnt` 可执行文件，依赖于 `cnt.c` 源文件。
+       
+   
+        $(CC) $(CFLAGS) -o cnt cnt.c
+    
+7. `clean`: 定义了一个目标 `clean`，用于删除生成的可执行文件。规则为：
+   
+        rm -f mixplus check cnt
+    
+
+这里使用 `rm -f` 命令删除文件，`-f` 表示忽略不存在的文件，以避免出现错误。
+在使用 `make` 命令时，它会根据依赖关系和规则构建相应的目标。例如，执行 `make all` 将构建所有可执行文件，执行 `make clean` 将删除生成的可执行文件。
+
+### testcases.txt
+
+这是一个测试用例文件，其中包含了一系列命令行测试案例，用于测试 `mixplus`、`check` 和 `cnt` 程序的不同情况。
+1. **Mixplus Test Cases:**
+ - `./mixplus 0x10 1`: 将两个参数相加，一个是十六进制数 `0x10`，另一个是十进制数 `1`。
+- `./mixplus 10 0x1`: 同上，但参数顺序不同。
+- `./mixplus 10`: 仅提供一个参数，测试程序对缺少参数的反应。
+- `./mixplus 0x0dragonegg`: 包含非法字符的十六进制数，测试程序对输入的容错性。
+- `./mixplus 10 0x`: 一个参数为十进制，另一个参数为空的十六进制字符串，测试程序对输入的容错性。
+- `./mixplus 10 0xdragon`: 一个参数为十进制，另一个参数包含非法字符的十六进制数，测试程序对输入的容错性。
+- `./mixplus 0xdeadbeef hello world`: 两个参数都包含非法字符，测试程序对输入的容错性。
+- `./mixplus 10 0xdragon`: 一个参数为十进制，另一个参数为包含非法字符的十六进制数，测试程序对输入的容错性。
+2. **Check Test Case:**
+    - `./check 0 0 1 1 0 1 1 0`: 测试 `check` 程序，传递四个点的坐标，检查两线段是否相交。
+
+3. **Cnt Test Case:**
+   - `./cnt abcd`: 测试 `cnt` 程序，传递一个字符串，统计字符串中的两字符和三字符子串的频率。
+
+这些测试用例旨在涵盖不同输入情况，以验证程序的正确性和容错性。在执行测试时，可以通过查看程序的输出来确认程序是否按照预期工作。
+
+### mixplus.c
+
+下面是对每一部分代码的详细解释：
+
+```cpp
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cctype>
+```
+
+这部分代码包含了程序所需的头文件，其中 `<iostream>` 提供了标准输入输出流，`<iomanip>` 提供了控制输出格式的工具，`<sstream>` 提供了字符串流的支持，`<cctype>` 提供了字符处理函数。
+
+```cpp
+int main(int argc, char* argv[]) {
+    // Check input
+    if (argc != 3) {
+        std::cerr << "ERROR" << std::endl;
+        return 1;
+    }
+    std::string input1(argv[1]);
+    std::string input2(argv[2]);
+
+    if (input1.empty() || input2.empty()) {
+        std::cerr << "ERROR" << std::endl;
+        return 1;
+    }
+```
+
+在 `main` 函数开始，首先检查命令行参数的数量是否为3。如果不是，输出错误信息到标准错误流 (`std::cerr`)，并返回1表示程序异常终止。接着，将命令行参数中的两个字符串存储在 `input1` 和 `input2` 中。
+
+```cpp
+    int num1, num2;
+
+    {
+        std::istringstream ss1(input1);
+        if (input1.substr(0, 2) == "0x") {
+            ss1.ignore(2);
+
+            for (size_t i = 0; i < ss1.str().size(); ++i) {
+                input1[i + 2] = std::tolower(input1[i + 2]);
+            }
+            for (char c : input1.substr(2)) {
+                if (!std::isxdigit(c)) {
+                    std::cerr << "ERROR" << std::endl;
+                    return 1;
+                }
+            }
+            ss1 >> std::hex >> num1;
+        } else {
+            ss1 >> std::dec >> num1;
+        }
+
+        if (ss1.fail()) {
+            std::cerr << "ERROR" << std::endl;
+            return 1;
+        }
+    }
+```
+
+这一部分处理第一个输入字符串 `input1`。首先，使用 `std::istringstream` 创建一个字符串流 `ss1`，然后判断 `input1` 的前两个字符是否为 "0x"，如果是，则表示 `input1` 是一个十六进制数。接着，通过 `ss1.ignore(2)` 跳过 "0x" 的两个字符。
+
+然后，使用一个循环将 `input1` 中除了前两个字符外的字符转换为小写，这是为了防止十六进制数中的字母为大写时，导致解析失败。
+
+接着，通过一个循环检查除前两个字符外的部分是否都是有效的十六进制字符，如果包含非法字符，输出错误信息并返回1。最后，使用 `ss1 >> std::hex >> num1` 将转换后的字符串解析为整数 `num1`。
+
+如果前面的操作失败，即解析出错，或者 `ss1.fail()` 返回 `true`，则输出错误信息并返回1。
+
+```cpp
+{
+        std::istringstream ss2(input2);
+        if (input2.substr(0, 2) == "0x") {
+            ss2.ignore(2);
+            for (size_t i = 0; i < ss2.str().size(); ++i) {
+                input2[i + 2] = std::tolower(input2[i + 2]);
+            }
+            for (char c : input2.substr(2)) {
+                if (!std::isxdigit(c)) {
+                    std::cerr << "ERROR" << std::endl;
+                    return 1;
+                }
+            }
+
+            ss2 >> std::hex >> num2;
+        } else {
+            ss2 >> std::dec >> num2;
+        }
+
+        if (ss2.fail()) {
+            std::cerr << "ERROR" << std::endl;
+            return 1;
+        }
+    }
+```
+
+这一部分与前面的代码类似，处理第二个输入字符串 `input2`。同样，通过字符串流 `ss2` 处理 `input2`，判断是否为十六进制数，进行相应的处理，最终解析为整数 `num2`。
+
+```cpp
+    // Result
+    int sum = num1 + num2;
+    std::cout << std::uppercase << std::hex << "0x" << sum << " " << std::dec << sum << std::endl;
+    return 0;
+}
+```
+
+最后，计算 `num1` 和 `num2` 的和，存储在 `sum` 中。然后，使用 `std::cout` 输出结果的十六进制表示（带有 "0x" 前缀）和十进制表示，其中 `std::uppercase` 用于将字母转换为大写。最后，返回0表示程序正常结束。
