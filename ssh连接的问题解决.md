@@ -54,3 +54,65 @@
 
 
 ![image-20231121112746004](联想截图_20231121112743.png)
+
+
+
+
+
+要检查目标主机上的 SSH 服务，可以执行以下步骤：
+
+### 对于 Linux 系统：
+
+1. **检查 SSH 服务是否运行：** 在目标主机的终端中执行以下命令，检查 SSH 服务是否正在运行：
+
+    ```bash
+    systemctl status ssh
+    ```
+
+    如果服务正在运行，你应该看到服务状态信息。如果未运行，你可以使用以下命令启动 SSH 服务：
+
+    ```bash
+    sudo systemctl start ssh
+    ```
+
+2. **确认 SSH 服务启动时自启动：** 为了确保 SSH 服务在系统启动时自动启动，可以执行以下命令：
+
+    ```bash
+    sudo systemctl enable ssh
+    ```
+
+### 对于 Windows 系统：
+
+1. **检查 SSH 服务状态：** 在 Windows 上，可以通过服务管理器检查服务状态。按下 `Win + R` 打开运行窗口，输入 `services.msc`，查找并确认 "OpenSSH SSH Server" 服务的状态。
+
+2. **确认 SSH 服务已安装：** 请确保在 Windows 上安装了 OpenSSH 服务器功能。在 "控制面板" -> "程序" -> "程序和功能" -> "启用或关闭 Windows 功能" 中，确认 "OpenSSH 服务器" 被选中。
+
+### 检查配置：
+
+无论是在 Linux 还是 Windows 上，SSH 服务的配置文件通常位于 `/etc/ssh/sshd_config`（Linux）或 `C:\ProgramData\ssh\sshd_config`（Windows）。可以打开配置文件查看相关配置项，确保 SSH 服务设置正确。例如，检查监听的地址、端口、是否允许密码登录等。
+
+```bash
+# Linux 上查看 SSH 配置
+cat /etc/ssh/sshd_config
+```
+
+```powershell
+# Windows 上查看 SSH 配置
+Get-Content C:\ProgramData\ssh\sshd_config
+```
+
+### 防火墙设置：
+
+确保防火墙设置允许 SSH 流量通过。如果你使用的是 Linux，可以使用 `ufw`（或其他防火墙管理工具）：
+
+```bash
+sudo ufw allow 22
+```
+
+在 Windows 上，确保防火墙允许入站 SSH 连接。
+
+### 用户凭据：
+
+确保你使用的用户名和密码或密钥对是正确的。
+
+在检查完这些方面后，应该能够连接到目标主机的 SSH 服务。如果仍然存在问题，查看 SSH 服务的日志文件可能有助于找到具体的错误信息。
